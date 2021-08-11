@@ -1,0 +1,97 @@
+<!-- Content:  - let,var & global variable Fucntion, Hoisting function, Array -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Practice</title>
+
+</head>
+<body>
+    <p>My Webpage</p>
+    
+    <script>
+        let a=10;
+        console.log(10);
+
+        let arr= [1,2,3,4,5];
+        console.log(arr);          // Array element has a property length bydefault & protoype array . Protoype is used to write class inJS
+        console.log(arr.length);
+        console.log(typeof(arr));
+
+        console.log("Hello world !!!");
+
+        //JavaScript variables , 
+
+        cc =20;     // Global scope
+        var dd=30;   // Function scope
+        let ee=50;     // Block Scope
+        
+        console.log("Fuction Print \n");
+        function fun(){
+            let aa=5;
+            if(aa==5){
+                let b =10;    // Block scaope var.
+                var c =20;   // Fuc. scope variable
+                d=50;       // Global variable
+                console.log("b(let) inside block scope",b);
+                console.log("c(var) inside block scope",c);
+                console.log("d() inside block scope",d);
+
+            }
+            // console.log("b ouside block", b);  // undefined outside block scope (let)
+             console.log("c(var) outside block & inside fuc. scope",c); // defined
+             console.log("d()  outside block & inside fuc. scope",d);   // defined
+        }
+            // console.log("b ouside func in global area", b)  // undefined outside block scope (let)
+            // console.log("c(var) global scope",c); // un-defined in global scope
+            // console.log("d()  global scope",d);   // this will not work as this line executes before fuc is called hence global will be acces. after fuc.call
+
+        fun();
+        console.log("d()  global scope",d);   // defined after the fuc. is called in global space
+  
+        // here when if aa==5 ,cond was false c was undefined but no-error, d showed error
+      
+
+        // Function Hoisting - This means that when we define fuc. then fuc defined in format of function1() are taken above the code before execution hence they do don give error even when they arecalled before fuc is defined , called as hoisting
+
+        function1();
+        //function2();    // this will give error , because this is not hoisted fuction
+
+        function function1(){   // Function Declaration
+            console.log("In 1st fuction ");
+             return;
+        }
+
+        var function2 = function (){         // Function Expression
+            console.log("In 2nd fuction");
+            return;
+        }
+            
+        function1();
+        function2();
+
+    // Array 
+    
+    let arr1 = ["apple", "orange", "banana"];  // array (arr1) also has a property length (length is property & not func.)
+    console.log(arr1);
+    console.log(arr1.length, arr1["length"]);
+
+    for(let i=0;i<arr1.length; i++){
+        console.log(arr1[i]);
+    }
+    arr1.push("guava"); console.log(arr1);     // push, to insert at end
+    arr1.pop();   console.log(arr1);           // pop, to remove from end
+    arr1.shift();   console.log(arr1);          // shift, to remove from front
+    arr1.unshift("Mango");   console.log(arr1);  // unshift, to insert at the front
+       console.log(arr1.indexOf("orange"));       // to find index of element
+
+    if (arr1[1]== "orange")
+      console.log("Yes it is orange !!");
+    else console.log("It is not orange");     
+
+    </script>
+</body>
+</html>

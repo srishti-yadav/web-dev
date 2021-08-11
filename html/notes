@@ -1,0 +1,31 @@
+
+we generally use iframe to embed outer content eg. other websites, youTube videos, etc
+
+We don,t use iframes to embed our own webpge into another as it is costlier as iframe downloads whole webpage, it's like opening new tab everytime 
+for own webpage we prefer to use lib like React, Vue
+
+
+Media.html files :-
+if we change just one para width/height the other will change such that the aspect parameter is maintained. However if we chnage both then image will chnage acc. and aspect ratio will not be retined -->
+alt in image is useful when image is not displayed or for blind people
+
+
+<!-- Ctrl + Shift + r= hard refresh, pre-downloaded content gets removed from browser -->
+
+<!--  video and Audio parameters :-
+    
+    controls: To give controls to audio/video
+    autoplay: to play automatically when page loads , modern browzers disable autoplay by default
+    preload: what data when we loaded as soon as page loads, 
+            auto: means all, 
+            metadata: only thumbnail & length of video, 
+            none: not even metadata is downloaded
+    loop: to let video play again once it's finished        
+
+    poster: Tells the defaul thumbnail of the video, has link to the thumbnail pic
+    loop : A Boolean attribute; if specified, the browser will automatically seek back to the start upon reaching the end of the video.
+    
+    The content inside the opening and closing <video></video> tags is shown as a fallback in browsers that don't support the element.
+
+
+-->

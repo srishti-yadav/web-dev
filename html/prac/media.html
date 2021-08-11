@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h4>Media </h4>
+    <img width="300" height="200" src="media/pic1.jpg" alt="pic of butterfly"> <!-- if we change just one para width/height the other will change such that the aspect parameter is maintained. However if we chnage both then image will chnage acc. and aspect ratio will not be retined -->
+    <br>
+    <video poster="media/poster.jpeg" preload="metadata" loop width="400" controls src="media/video.mp4">you,re Browzer don,t support the video</video> <!-- controls: to give control eg play/pause/volume -->
+    <br>
+    <audio controls src="media/audio.mp3"  ></audio>
+</body>
+</html> 
+
+<!-- Ctrl + Shift + r= hard refresh, pre-downloaded content gets removed from browser -->
+
+<!-- 
+    video and Audio parameters :-
+    
+    controls: To give controls to audio/video
+    autoplay: to play automatically when page loads , modern browzers disable autoplay by default
+    preload: what data when we loaded as soon as page loads, 
+            auto: means all, 
+            metadata: only thumbnail & length of video, 
+            none: not even metadata is downloaded
+    loop: to let video play again once it's finished        
+
+    poster: Tells the defaul thumbnail of the video, has link to the thumbnail pic
+    loop : A Boolean attribute; if specified, the browser will automatically seek back to the start upon reaching the end of the video.
+    
+    The content inside the opening and closing <video></video> tags is shown as a fallback in browsers that don't support the element.
+
+
+-->

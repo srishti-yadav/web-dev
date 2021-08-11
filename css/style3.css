@@ -1,0 +1,152 @@
+.div1{
+    background-color: rosybrown;
+    margin: 5px;
+}
+
+.div1:hover {           /* This is a pseudo selector as no such element actually exists in our code  */
+  background-color: rebeccapurple;
+}
+
+.div1:active{
+    background-color: seagreen;
+}
+
+
+div.btn{
+    margin: 50px;
+    color: white;
+    background-color: chocolate;
+    width: 100px;
+    padding: 50px;
+
+    box-shadow: darkgray 10px 10px 5px;  /* here 5px in last is for blurr effect of the shaow while first two are for x & y axes shadow. Tis is a gaussian blurr parameter if blur pixel is 1 px mean every pixel is mixed with 1 adjacent piexl, so edges become less sharp when we increase the shadow*/
+    transition: 0.8s;      /* all transitions will take 1 sec, we do this to make it smooth */
+    
+}
+
+div.btn:hover{
+    transform: translate(-10px, -10px);  /* we do this to move the box */
+    box-shadow: darkgray 20px 20px 10px;
+    transition: 0.5s;
+}
+
+div.btn:active{
+    transform: translate(5px, 5px);
+    box-shadow: darkgray 5px 5px 5px;
+    transition: transform 0.2s box-shadow 0.4s;
+}
+
+
+.container{
+    background-color: darkgray;
+    width: 400px;
+    height: 300px;
+    margin: 30px;
+
+}
+
+div.item{
+    background-color: goldenrod;
+    display: inline-block;               /* inline me we cant modify height & width own our hence we use inline-block  */
+    height: 50px;
+    width: 50px;
+    border: solid blue 2px;
+    margin: 5px;
+
+    animation: bounce 2s;
+    animation-iteration-count: infinite;
+
+    border-radius: 50%;                    /* to make circles from sqaure */
+
+}
+
+div.one{
+    animation-timing-function: ease-in;
+}
+
+div.two{
+    animation-timing-function: ease-out;
+}
+
+div.three{
+    animation-timing-function: linear;
+}
+
+div.four{
+    animation-timing-function: ease-in-out;
+}
+@keyframes bounce {                             /* we set what changes we want at what stage of animation */
+
+    0%{
+
+    }
+
+    50%{
+         transform: translateY(200px);
+         background-color: deeppink;
+    }
+    
+    100%{
+
+        transform: translate(-20px, -20px);
+    }
+}
+
+
+.game{
+    background-color: azure;
+    margin: 50px;
+    height: 400px;
+    width: 500px;
+}
+
+.game div.box{
+    background-color: blueviolet;
+    height: 50px;
+    width: 50px;
+    margin: 5px;
+    border: solid black 2px;
+    display: inline-block;
+}
+
+.game div.player{
+    background-color: brown;
+    transform: translateY(200px);
+    animation: move 4s infinite linear;
+    animation-play-state: paused;
+}
+
+.game:active .player{
+    animation-play-state: running;
+}
+
+.game div.enemy{
+    margin-left: 100px;
+    animation-name: bounce2;                      /* name we give to our animation to further define action via. keyframes */
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.enemy.playtwo{                  /* we keep enemy & .playtwo so that it,s applied to this only. without space means element which has both the class, if there was space means that- playtwo element inside enemy class element */
+    animation-duration: 1s;     /* after this prop the squrae will start to move i.e animation starts */
+}
+
+.enemy.playthree{
+    animation-duration: 1.5s;
+}
+
+@keyframes bounce2{
+
+    50%{
+          transform: translateY(300px);      /* action to take when 50% animation is done */
+    }
+}
+
+
+@keyframes move{        /* Animation action for player to move */
+    50%{
+        transform: translateX(300px) translateY(200px);     /* we maintain translateX so that earlier 200px is maintained, as all transforms are apllied on original state */
+    }
+
+}
+

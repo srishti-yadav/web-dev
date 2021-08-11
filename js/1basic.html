@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        console.log("hello -1 !!")
+        alert('World-1 !!')
+ 
+    </script>
+
+    <script async defer src="basic.js">  /* we write async & defer hence first entire page is loaded then the script earlier echo use to block the page rendering 
+                                                async: means it will download the page parallely, defer means it will not run the script till all the html has not rendered */
+        console.log('when we lin external js(basic.js) then content btw script tag will not be considered i.e this content')
+    </script>
+</head>
+<body>
+    <h3>JS Intro</h3>
+ 
+    Apple :)
+</body>
+</html>

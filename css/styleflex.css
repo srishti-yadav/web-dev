@@ -1,0 +1,68 @@
+.demo1{
+    width: 100px;
+    height: 100px;
+    border: 7px solid;
+    border-image: linear-gradient(
+        135deg,
+        #FF0000 0%,
+        #16df37 50%,
+        #e70eca 100%
+    ) 1;
+
+}
+.container{
+    height: 400px;
+    width: 400px;
+    display: flex;
+    background-color: bisque;
+
+    flex-wrap:wrap;  /* wrap: top & wrap-reverse : means in bottom */   /* we can have 8 alignments using flex-wrap: & flex-direction: total 8 comb. are possible; */
+    flex-direction:column-reverse;   /* has 4 position i.e row, row-reverse, column, column-reverse */
+
+    justify-content:end;  /*this is to align the entire row or column */
+    align-content: flex-end;  /* item' bottom will be aligned  */
+
+    display: inline-flex;
+}
+
+.item{
+    font-size: 20pt;
+    height: 50px;
+    width: 50px;
+    margin: 10px;
+    background-color: cadetblue;
+    color: white;
+    border: dotted black 2px;
+
+}
+
+
+.item2{
+    font-size: 20pt;
+    height: 50px;
+    width: 50px;
+    background-color: cadetblue;
+    color: white;
+    border: dotted black 2px;
+
+}
+
+.box{
+    height: 100px;
+    width: 100px;
+    margin: 20px;
+    background-color: brown;
+
+}
+
+@media (max-width :1000px){         /* This is desktop first, we can also apply for mobile first approach, in which case we will use min-width in media - query */
+    .box{
+        background-color: green;
+    }
+}
+
+@media (max-width: 800px) {
+    .box{
+        background-color: hotpink;
+    }
+}
